@@ -1,6 +1,11 @@
 function abrir(secao) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.getElementById(secao).classList.add('active');
+  const secoes = document.querySelectorAll('.section');
+  secoes.forEach(s => s.classList.remove('active'));
+
+  const atual = document.getElementById(secao);
+  if (atual) {
+    atual.classList.add('active');
+  }
 }
 
 function enviar() {
@@ -8,22 +13,23 @@ function enviar() {
 }
 
 function enviarMsg() {
-  let msg = document.getElementById("msg").value;
-  let chat = document.getElementById("chatBox");
+  const msgInput = document.getElementById("msg");
+  const chat = document.getElementById("chatBox");
 
-  if (msg.trim() === "") return;
+  const texto = msgInput.value.trim();
+  if (!texto) return;
 
-  let nome = document.createElement("div");
-  nome.classList.add("nome");
-  nome.textContent = "Anônimo";
+  const nome = document.createElement("div");
+  nome.className = "nome";
+  nome.innerText = "Anônimo";
 
-  let div = document.createElement("div");
-  div.classList.add("msg", "aluno");
-  div.textContent = msg;
+  const msg = document.createElement("div");
+  msg.className = "msg aluno";
+  msg.innerText = texto;
 
   chat.appendChild(nome);
-  chat.appendChild(div);
+  chat.appendChild(msg);
 
-  document.getElementById("msg").value = "";
+  msgInput.value = "";
   chat.scrollTop = chat.scrollHeight;
 }
