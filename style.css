@@ -4,7 +4,6 @@ body {
   background: #f2f2f2;
 }
 
-/* TOPO */
 header {
   background: linear-gradient(90deg, #2e7d32, #4a148c);
   color: white;
@@ -16,7 +15,6 @@ header img {
   width: 60px;
 }
 
-/* CONTEÚDO */
 .section {
   display: none;
   padding: 15px;
@@ -27,7 +25,6 @@ header img {
   display: block;
 }
 
-/* CARDS */
 .card {
   background: white;
   padding: 15px;
@@ -36,7 +33,6 @@ header img {
   box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
 
-/* INPUTS */
 textarea, input {
   width: 100%;
   padding: 10px;
@@ -46,7 +42,6 @@ textarea, input {
   font-size: 16px;
 }
 
-/* BOTÃO */
 button {
   background: #4a148c;
   color: white;
@@ -57,7 +52,6 @@ button {
   width: 100%;
 }
 
-/* CHAT */
 .chat-box {
   display: flex;
   flex-direction: column;
@@ -76,12 +70,6 @@ button {
   align-self: flex-end;
 }
 
-.msg.outro {
-  background: #ddd;
-  align-self: flex-start;
-}
-
-/* BARRA INFERIOR (tipo app) */
 .navbar {
   position: fixed;
   bottom: 0;
