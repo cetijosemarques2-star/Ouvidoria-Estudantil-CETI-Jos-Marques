@@ -4,6 +4,7 @@ body {
   background: #f2f2f2;
 }
 
+/* TOPO */
 header {
   background: linear-gradient(90deg, #2e7d32, #4a148c);
   color: white;
@@ -15,16 +16,18 @@ header img {
   width: 60px;
 }
 
+/* SEÇÕES */
 .section {
   display: none;
   padding: 15px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 
 .active {
   display: block;
 }
 
+/* CARD */
 .card {
   background: white;
   padding: 15px;
@@ -32,19 +35,23 @@ header img {
   margin-bottom: 15px;
 }
 
+/* INPUTS */
 textarea, input {
   width: 100%;
   padding: 10px;
   margin-top: 8px;
   border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
+/* BOTÕES */
 button {
   background: #4a148c;
   color: white;
   border: none;
   padding: 12px;
   border-radius: 10px;
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -63,7 +70,7 @@ button {
 }
 
 .chat-area {
-  height: calc(100vh - 160px);
+  height: calc(100vh - 200px);
   overflow-y: auto;
   padding: 10px;
   background: #e5e5e5;
@@ -89,6 +96,7 @@ button {
   text-align: right;
 }
 
+/* INPUT FIXO */
 .chat-input {
   position: fixed;
   bottom: 60px;
@@ -99,6 +107,7 @@ button {
   background: white;
 }
 
+/* MENU */
 .navbar {
   position: fixed;
   bottom: 0;
@@ -106,4 +115,5 @@ button {
   background: white;
   display: flex;
   justify-content: space-around;
+  border-top: 1px solid #ccc;
 }
