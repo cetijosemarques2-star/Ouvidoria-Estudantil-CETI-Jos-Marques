@@ -1,7 +1,7 @@
 body {
-  font-family: Arial;
   margin: 0;
-  background: #f4f6f9;
+  font-family: Arial;
+  background: #f2f2f2;
 }
 
 /* TOPO */
@@ -9,93 +9,91 @@ header {
   background: linear-gradient(90deg, #2e7d32, #4a148c);
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 
 header img {
-  width: 80px;
-}
-
-/* MENU */
-nav {
-  background: #2e7d32;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav button {
-  flex: 1;
-  min-width: 120px;
-  border: none;
-  background: none;
-  color: white;
-  padding: 12px;
-  font-size: 16px;
+  width: 60px;
 }
 
 /* CONTEÚDO */
 .section {
   display: none;
   padding: 15px;
+  padding-bottom: 80px;
 }
 
 .active {
   display: block;
 }
 
-/* INPUTS */
-textarea {
-  width: 100%;
-  height: 90px;
-  font-size: 16px;
+/* CARDS */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
 
-input[type="text"] {
-  width: 70%;
+/* INPUTS */
+textarea, input {
+  width: 100%;
   padding: 10px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
   font-size: 16px;
 }
 
 /* BOTÃO */
 button {
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 6px;
+  background: #4a148c;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 100%;
 }
 
 /* CHAT */
-#chatBox {
-  height: 250px;
-  background: #eee;
-  overflow-y: scroll;
-  margin-bottom: 10px;
-  padding: 10px;
-  font-size: 14px;
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* 📱 AJUSTES EXCLUSIVOS PARA CELULAR */
-@media (max-width: 600px) {
+.msg {
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 70%;
+}
 
-  header img {
-    width: 70px;
-  }
+.msg.aluno {
+  background: #4a148c;
+  color: white;
+  align-self: flex-end;
+}
 
-  h1 {
-    font-size: 20px;
-  }
+.msg.outro {
+  background: #ddd;
+  align-self: flex-start;
+}
 
-  nav button {
-    font-size: 14px;
-    padding: 10px;
-  }
+/* BARRA INFERIOR (tipo app) */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ccc;
+}
 
-  input[type="text"] {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  button {
-    width: 100%;
-  }
+.navbar button {
+  background: none;
+  color: #2e7d32;
+  font-size: 14px;
 }
