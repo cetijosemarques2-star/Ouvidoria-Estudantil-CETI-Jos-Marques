@@ -121,10 +121,15 @@ button {
   align-items: center;
   gap: 8px;
   margin: 5px 0;
-  cursor: pointer;
+  font-size: 16px;
 }
 
 input[type="radio"] {
   width: auto;
   margin: 0;
+  transform: scale(1.2);
+  .card p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  }
 }
