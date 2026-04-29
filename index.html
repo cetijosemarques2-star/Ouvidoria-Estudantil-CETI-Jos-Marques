@@ -26,28 +26,32 @@
 <!-- FORMULÁRIO -->
 <div id="formulario" class="section">
 
-  <div class="card">
-    <h3>📋 Feedback Escolar</h3>
-  </div>
+  <form action="https://formsubmit.co/cetijosemarques2@gmail.com" method="POST">
 
-  <div class="card">
-    <p>O ambiente é limpo?</p>
-    <label><input type="radio" name="q1"> Sim</label>
-    <label><input type="radio" name="q1"> Não</label>
+    <div class="card">
+      <h3>📋 Feedback Escolar</h3>
+    </div>
 
-    <p>Banheiros em boas condições?</p>
-    <label><input type="radio" name="q2"> Sim</label>
-    <label><input type="radio" name="q2"> Não</label>
+    <div class="card">
+      <p>O ambiente é limpo?</p>
+      <label><input type="radio" name="Limpeza" value="Sim"> Sim</label>
+      <label><input type="radio" name="Limpeza" value="Não"> Não</label>
 
-    <p>Salas confortáveis?</p>
-    <label><input type="radio" name="q3"> Sim</label>
-    <label><input type="radio" name="q3"> Não</label>
+      <p>Banheiros em boas condições?</p>
+      <label><input type="radio" name="Banheiros" value="Sim"> Sim</label>
+      <label><input type="radio" name="Banheiros" value="Não"> Não</label>
 
-    <p>Comentário:</p>
-    <textarea id="comentario"></textarea>
+      <p>Salas confortáveis?</p>
+      <label><input type="radio" name="Salas" value="Sim"> Sim</label>
+      <label><input type="radio" name="Salas" value="Não"> Não</label>
 
-    <button onclick="enviar()">Enviar</button>
-  </div>
+      <p>Comentário:</p>
+      <textarea name="Comentario"></textarea>
+
+      <button type="submit">Enviar</button>
+    </div>
+
+  </form>
 
 </div>
 
