@@ -23,20 +23,117 @@
   </div>
 </div>
 
-<!-- FORMULÁRIO -->
+<!-- FORMULÁRIO COMPLETO -->
 <div id="formulario" class="section">
-  <div class="card">
-    <h3>Questionário</h3>
 
-    <p>Você gosta da escola?</p>
+  <div class="card">
+    <h3>📋 Feedback Escolar dos Alunos</h3>
+  </div>
+
+  <div class="card">
+    <h4>🏫 Estrutura da Escola</h4>
+
+    <p>O ambiente da escola é limpo e organizado?</p>
     <input type="radio" name="q1"> Sim
     <input type="radio" name="q1"> Não
 
-    <p>Comentário:</p>
-    <textarea id="comentario"></textarea>
+    <p>Os banheiros estão em boas condições?</p>
+    <input type="radio" name="q2"> Sim
+    <input type="radio" name="q2"> Não
 
-    <button onclick="enviar()">Enviar</button>
+    <p>As salas são confortáveis?</p>
+    <input type="radio" name="q3"> Sim
+    <input type="radio" name="q3"> Não
+
+    <p>Há espaços para estudo?</p>
+    <input type="radio" name="q4"> Sim
+    <input type="radio" name="q4"> Não
+
+    <p>A estrutura atende suas necessidades?</p>
+    <input type="radio" name="q5"> Sim
+    <input type="radio" name="q5"> Não
   </div>
+
+  <div class="card">
+    <h4>📚 Ensino e Professores</h4>
+
+    <p>Você entende o conteúdo?</p>
+    <input type="radio" name="q6"> Sim
+    <input type="radio" name="q6"> Não
+
+    <p>Os professores estão preparados?</p>
+    <input type="radio" name="q7"> Sim
+    <input type="radio" name="q7"> Não
+
+    <p>As aulas são interessantes?</p>
+    <input type="radio" name="q8"> Sim
+    <input type="radio" name="q8"> Não
+
+    <p>Você tira dúvidas com facilidade?</p>
+    <input type="radio" name="q9"> Sim
+    <input type="radio" name="q9"> Não
+
+    <p>O ensino atende suas expectativas?</p>
+    <input type="radio" name="q10"> Sim
+    <input type="radio" name="q10"> Não
+  </div>
+
+  <div class="card">
+    <h4>🧠 Ambiente Escolar</h4>
+
+    <p>Você se sente seguro?</p>
+    <input type="radio" name="q11"> Sim
+    <input type="radio" name="q11"> Não
+
+    <p>Existe respeito na escola?</p>
+    <input type="radio" name="q12"> Sim
+    <input type="radio" name="q12"> Não
+
+    <p>A escola escuta os alunos?</p>
+    <input type="radio" name="q13"> Sim
+    <input type="radio" name="q13"> Não
+
+    <p>O ambiente é acolhedor?</p>
+    <input type="radio" name="q14"> Sim
+    <input type="radio" name="q14"> Não
+  </div>
+
+  <div class="card">
+    <h4>🍽️ Alimentação</h4>
+
+    <p>A merenda é boa?</p>
+    <input type="radio" name="q15"> Sim
+    <input type="radio" name="q15"> Não
+
+    <p>A quantidade é suficiente?</p>
+    <input type="radio" name="q16"> Sim
+    <input type="radio" name="q16"> Não
+  </div>
+
+  <div class="card">
+    <h4>📊 Avaliação Geral</h4>
+
+    <p>Como você avalia a escola?</p>
+    <input type="radio" name="q17"> Ótima
+    <input type="radio" name="q17"> Boa
+    <input type="radio" name="q17"> Regular
+    <input type="radio" name="q17"> Ruim
+  </div>
+
+  <div class="card">
+    <h4>💬 Opinião Aberta</h4>
+
+    <p>O que pode melhorar?</p>
+    <textarea></textarea>
+
+    <p>O que você mais gosta?</p>
+    <textarea></textarea>
+  </div>
+
+  <div class="card">
+    <button onclick="enviar()">Enviar Respostas</button>
+  </div>
+
 </div>
 
 <!-- CHAT -->
@@ -51,7 +148,7 @@
   </div>
 </div>
 
-<!-- MENU INFERIOR (ESTILO APP) -->
+<!-- MENU -->
 <div class="navbar">
   <button onclick="abrir('inicio')">🏠</button>
   <button onclick="abrir('formulario')">📝</button>
@@ -61,4 +158,4 @@
 <script src="script.js"></script>
 
 </body>
-</html>
+  </html>
