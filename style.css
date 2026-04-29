@@ -85,3 +85,11 @@ button {
   color: #2e7d32;
   font-size: 14px;
 }
+.card p {
+  font-weight: 500;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
