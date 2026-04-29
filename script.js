@@ -1,6 +1,7 @@
 function abrir(secao) {
-  const secoes = document.querySelectorAll('.section');
-  secoes.forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.section').forEach(s => {
+    s.classList.remove('active');
+  });
 
   const atual = document.getElementById(secao);
   if (atual) {
@@ -13,11 +14,11 @@ function enviar() {
 }
 
 function enviarMsg() {
-  const msgInput = document.getElementById("msg");
+  const input = document.getElementById("msg");
   const chat = document.getElementById("chatBox");
 
-  const texto = msgInput.value.trim();
-  if (!texto) return;
+  const texto = input.value.trim();
+  if (texto === "") return;
 
   const nome = document.createElement("div");
   nome.className = "nome";
@@ -30,6 +31,6 @@ function enviarMsg() {
   chat.appendChild(nome);
   chat.appendChild(msg);
 
-  msgInput.value = "";
+  input.value = "";
   chat.scrollTop = chat.scrollHeight;
 }
