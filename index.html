@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Ouvidoria CETI José Marques</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png">
+  <h1>Ouvidoria Estudantil</h1>
+  <p>CETI José Marques</p>
+</header>
+
+<nav>
+  <button onclick="abrir('inicio')">Início</button>
+  <button onclick="abrir('formulario')">Questionário</button>
+  <button onclick="abrir('chat')">Chat</button>
+</nav>
+
+<div id="inicio" class="section active">
+  <h2>Bem-vindo</h2>
+  <p>Ajude a melhorar a escola com sua opinião.</p>
+</div>
+
+<div id="formulario" class="section">
+  <h2>Questionário</h2>
+
+  <p>Você gosta da escola?</p>
+  <input type="radio" name="q1"> Sim
+  <input type="radio" name="q1"> Não
+
+  <p>Comentário:</p>
+  <textarea id="comentario"></textarea>
+
+  <br><br>
+  <button onclick="enviar()">Enviar</button>
+</div>
+
+<div id="chat" class="section">
+  <h2>Chat</h2>
+
+  <div id="chatBox"></div>
+
+  <input type="text" id="msg">
+  <button onclick="enviarMsg()">Enviar</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
