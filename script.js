@@ -1,11 +1,3 @@
-function abrir(secao, botao) {
-  document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
-  document.getElementById(secao).classList.add("active");
-
-  document.querySelectorAll(".navbar button").forEach(b => b.classList.remove("active"));
-  if(botao) botao.classList.add("active");
-}
-
 function enviarMsg() {
   const input = document.getElementById("msg");
   const chat = document.getElementById("chatBox");
@@ -13,21 +5,22 @@ function enviarMsg() {
   const texto = input.value.trim();
   if (texto === "") return;
 
-  const nome = document.createElement("div");
-  nome.className = "nome";
-  nome.innerText = "Anônimo";
+  const row = document.createElement("div");
+  row.className = "msg-row right";
+
+  const user = document.createElement("span");
+  user.className = "user";
+  user.innerText = "Anônimo";
 
   const msg = document.createElement("div");
-  msg.className = "msg aluno";
+  msg.className = "msg right";
   msg.innerText = texto;
 
-  chat.appendChild(nome);
-  chat.appendChild(msg);
+  row.appendChild(user);
+  row.appendChild(msg);
+
+  chat.appendChild(row);
 
   input.value = "";
   chat.scrollTop = chat.scrollHeight;
-}
-
-function toggleDark() {
-  document.body.classList.toggle("dark");
 }
