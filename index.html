@@ -3,28 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ouvidoria CETI</title>
+<title>CETI José Marques</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- TOPO -->
 <header>
   <img src="logo.png">
   <h2>CETI José Marques</h2>
 </header>
 
-<!-- MENU SUPERIOR -->
-<div class="top-menu">
-  <button onclick="abrir('inicio', this)" class="active">💡 Mural</button>
+<!-- MENU -->
+<div class="tabs">
+  <button onclick="abrir('mural', this)" class="active">💡 Mural</button>
   <button onclick="abrir('formulario', this)">📝 Formulário</button>
   <button onclick="abrir('chat', this)">💬 Chat</button>
 </div>
 
 <!-- MURAL -->
-<div id="inicio" class="section active">
+<div id="mural" class="section active">
   <div class="card">
     <h3>📢 Mural de Avisos</h3>
     <p>Fique por dentro das novidades da escola.</p>
@@ -40,134 +39,105 @@
     <p>Provas começam dia 10 de maio.</p>
   </div>
 </div>
+
+<!-- FORMULÁRIO -->
+<div id="formulario" class="section">
+
 <form action="https://formsubmit.co/cetijosemarques2@gmail.com" method="POST">
 
-<div class="card"><h3>📋 Feedback Escolar dos Alunos</h3></div>
+<div class="card"><h3>📋 Feedback Escolar</h3></div>
 
-<!-- 🏫 INFRAESTRUTURA -->
 <div class="card">
 <h4>🏫 Infraestrutura</h4>
 
-<p>A estrutura da escola atende suas necessidades?</p>
-<label><input type="radio" name="infraestrutura1" value="Sim" required> Sim</label>
-<label><input type="radio" name="infraestrutura1" value="Não"> Não</label>
+<p>A escola atende suas necessidades?</p>
+<label><input type="radio" name="infra1" required> Sim</label>
+<label><input type="radio" name="infra1"> Não</label>
 
-<p>As salas de aula são confortáveis?</p>
-<label><input type="radio" name="infraestrutura2" value="Sim" required> Sim</label>
-<label><input type="radio" name="infraestrutura2" value="Não"> Não</label>
+<p>Salas confortáveis?</p>
+<label><input type="radio" name="infra2"> Sim</label>
+<label><input type="radio" name="infra2"> Não</label>
 
-<p>A escola possui espaços adequados para estudo?</p>
-<label><input type="radio" name="infraestrutura3" value="Sim" required> Sim</label>
-<label><input type="radio" name="infraestrutura3" value="Não"> Não</label>
+<p>Espaços de estudo adequados?</p>
+<label><input type="radio" name="infra3"> Sim</label>
+<label><input type="radio" name="infra3"> Não</label>
 </div>
 
-<!-- 🧼 LIMPEZA -->
 <div class="card">
-<h4>🧼 Limpeza</h4>
+<h4>🧹 Limpeza</h4>
 
-<p>O ambiente da escola é limpo e organizado?</p>
-<label><input type="radio" name="limpeza1" value="Sim" required> Sim</label>
-<label><input type="radio" name="limpeza1" value="Não"> Não</label>
+<p>Ambiente limpo?</p>
+<label><input type="radio" name="limpeza1"> Sim</label>
+<label><input type="radio" name="limpeza1"> Não</label>
 
-<p>Os banheiros estão em boas condições?</p>
-<label><input type="radio" name="limpeza2" value="Sim" required> Sim</label>
-<label><input type="radio" name="limpeza2" value="Não"> Não</label>
+<p>Banheiros em boas condições?</p>
+<label><input type="radio" name="limpeza2"> Sim</label>
+<label><input type="radio" name="limpeza2"> Não</label>
 </div>
 
-<!-- 🍽️ ALIMENTAÇÃO -->
 <div class="card">
 <h4>🍽️ Alimentação</h4>
 
-<p>A merenda escolar é de boa qualidade?</p>
-<label><input type="radio" name="alimentacao1" value="Sim" required> Sim</label>
-<label><input type="radio" name="alimentacao1" value="Não"> Não</label>
+<p>Merenda é de qualidade?</p>
+<label><input type="radio" name="merenda1"> Sim</label>
+<label><input type="radio" name="merenda1"> Não</label>
 
-<p>A quantidade de comida é suficiente?</p>
-<label><input type="radio" name="alimentacao2" value="Sim" required> Sim</label>
-<label><input type="radio" name="alimentacao2" value="Não"> Não</label>
+<p>Quantidade suficiente?</p>
+<label><input type="radio" name="merenda2"> Sim</label>
+<label><input type="radio" name="merenda2"> Não</label>
 </div>
 
-<!-- 🧠 AMBIENTE -->
 <div class="card">
-<h4>🧠 Ambiente Escolar</h4>
+<h4>📚 Ensino</h4>
 
-<p>Você se sente seguro dentro da escola?</p>
-<label><input type="radio" name="ambiente1" value="Sim" required> Sim</label>
-<label><input type="radio" name="ambiente1" value="Não"> Não</label>
+<p>Você entende o conteúdo?</p>
+<label><input type="radio" name="ensino1"> Sim</label>
+<label><input type="radio" name="ensino1"> Não</label>
 
-<p>Existe respeito entre alunos e professores?</p>
-<label><input type="radio" name="ambiente2" value="Sim" required> Sim</label>
-<label><input type="radio" name="ambiente2" value="Não"> Não</label>
-
-<p>O ambiente escolar é acolhedor?</p>
-<label><input type="radio" name="ambiente3" value="Sim" required> Sim</label>
-<label><input type="radio" name="ambiente3" value="Não"> Não</label>
+<p>Professores preparados?</p>
+<label><input type="radio" name="ensino2"> Sim</label>
+<label><input type="radio" name="ensino2"> Não</label>
 </div>
 
-<!-- 📚 ENSINO -->
 <div class="card">
-<h4>📚 Ensino e Professores</h4>
+<h4>🧠 Ambiente</h4>
 
-<p>Você entende o conteúdo explicado pelos professores?</p>
-<label><input type="radio" name="ensino1" value="Sim" required> Sim</label>
-<label><input type="radio" name="ensino1" value="Não"> Não</label>
+<p>Você se sente seguro?</p>
+<label><input type="radio" name="ambiente1"> Sim</label>
+<label><input type="radio" name="ambiente1"> Não</label>
 
-<p>Os professores estão preparados para ensinar?</p>
-<label><input type="radio" name="ensino2" value="Sim" required> Sim</label>
-<label><input type="radio" name="ensino2" value="Não"> Não</label>
-
-<p>As aulas são interessantes?</p>
-<label><input type="radio" name="ensino3" value="Sim" required> Sim</label>
-<label><input type="radio" name="ensino3" value="Não"> Não</label>
-
-<p>Você se sente à vontade para tirar dúvidas?</p>
-<label><input type="radio" name="ensino4" value="Sim" required> Sim</label>
-<label><input type="radio" name="ensino4" value="Não"> Não</label>
+<p>Há respeito na escola?</p>
+<label><input type="radio" name="ambiente2"> Sim</label>
+<label><input type="radio" name="ambiente2"> Não</label>
 </div>
 
-<!-- 📊 AVALIAÇÃO -->
 <div class="card">
 <h4>📊 Avaliação Geral</h4>
 
-<label><input type="radio" name="avaliacao" value="Ótima" required> Ótima</label>
-<label><input type="radio" name="avaliacao" value="Boa"> Boa</label>
-<label><input type="radio" name="avaliacao" value="Regular"> Regular</label>
-<label><input type="radio" name="avaliacao" value="Ruim"> Ruim</label>
+<label><input type="radio" name="geral"> Ótima</label>
+<label><input type="radio" name="geral"> Boa</label>
+<label><input type="radio" name="geral"> Regular</label>
+<label><input type="radio" name="geral"> Ruim</label>
 </div>
 
-<!-- 💬 OPINIÃO -->
 <div class="card">
-<h4>💬 Opinião</h4>
-
-<textarea name="melhorar" placeholder="O que a escola pode melhorar?"></textarea>
-<textarea name="gosta" placeholder="O que você mais gosta na escola?"></textarea>
-
+<textarea name="comentario" placeholder="Sugestões..."></textarea>
 <button type="submit">Enviar</button>
 </div>
 
 </form>
-
-<div class="card">
-<h4>💬 Opinião</h4>
-
-<textarea name="Melhorar" placeholder="O que melhorar?"></textarea>
-<textarea name="Gostar" placeholder="O que você mais gosta?"></textarea>
-
-<button type="submit">Enviar</button>
-</div>
-
-</form>
-
 </div>
 
 <!-- CHAT -->
 <div id="chat" class="section chat-page">
-  <div id="chatBox" class="chat-area"></div>
+
+  <div id="chatBox" class="chat-box"></div>
 
   <div class="chat-input">
-    <input type="text" id="msg" placeholder="Digite uma mensagem...">
+    <input type="text" id="msg" placeholder="Digite uma mensagem">
     <button onclick="enviarMsg()">Enviar</button>
   </div>
+
 </div>
 
 <script src="script.js"></script>
