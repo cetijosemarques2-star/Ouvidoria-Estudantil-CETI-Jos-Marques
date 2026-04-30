@@ -10,51 +10,156 @@
 
 <body>
 
-<!-- TOPO COM ABAS -->
-<div class="topbar">
-  <div class="tabs">
-    <button onclick="abrir('chat', this)" class="tab active">💬 Chat</button>
-    <button onclick="abrir('inicio', this)" class="tab">💡 Mural</button>
-    <button onclick="abrir('formulario', this)" class="tab">📋 Formulário</button>
-  </div>
-</div>
-
-<!-- HEADER -->
-<header class="header">
+<!-- TOPO -->
+<header>
   <img src="logo.png">
   <h2>CETI José Marques</h2>
 </header>
 
+<!-- MENU SUPERIOR -->
+<div class="top-menu">
+  <button onclick="abrir('inicio', this)" class="active">💡 Mural</button>
+  <button onclick="abrir('formulario', this)">📝 Formulário</button>
+  <button onclick="abrir('chat', this)">💬 Chat</button>
+</div>
+
 <!-- MURAL -->
-<div id="inicio" class="section">
+<div id="inicio" class="section active">
   <div class="card">
-    <h3>📢 Avisos</h3>
-    <p>Aqui ficam os avisos da escola.</p>
+    <h3>📢 Mural de Avisos</h3>
+    <p>Fique por dentro das novidades da escola.</p>
+  </div>
+
+  <div class="card">
+    <h4>🏆 Olimpíadas</h4>
+    <p>Inscrições abertas!</p>
+  </div>
+
+  <div class="card">
+    <h4>📅 Cronograma</h4>
+    <p>Provas começam dia 10 de maio.</p>
   </div>
 </div>
 
-<!-- FORM -->
+<!-- FORMULÁRIO COMPLETO -->
 <div id="formulario" class="section">
-  <div class="card">
-    <h3>📋 Feedback</h3>
-    <textarea placeholder="Digite sua opinião..."></textarea>
-    <button>Enviar</button>
-  </div>
+
+<form action="https://formsubmit.co/cetijosemarques2@gmail.com" method="POST">
+
+<div class="card"><h3>📋 Feedback Escolar dos Alunos</h3></div>
+
+<div class="card">
+<h4>🏫 Estrutura da Escola</h4>
+
+<p>O ambiente da escola é limpo e organizado?</p>
+<label><input type="radio" name="Limpeza" value="Sim" required> Sim</label>
+<label><input type="radio" name="Limpeza" value="Não"> Não</label>
+
+<p>Os banheiros estão em boas condições?</p>
+<label><input type="radio" name="Banheiros" value="Sim" required> Sim</label>
+<label><input type="radio" name="Banheiros" value="Não"> Não</label>
+
+<p>As salas são confortáveis?</p>
+<label><input type="radio" name="Salas" value="Sim" required> Sim</label>
+<label><input type="radio" name="Salas" value="Não"> Não</label>
+
+<p>Possui espaços de estudo?</p>
+<label><input type="radio" name="Espacos" value="Sim" required> Sim</label>
+<label><input type="radio" name="Espacos" value="Não"> Não</label>
+
+<p>A estrutura atende suas necessidades?</p>
+<label><input type="radio" name="Estrutura" value="Sim" required> Sim</label>
+<label><input type="radio" name="Estrutura" value="Não"> Não</label>
+</div>
+
+<div class="card">
+<h4>📚 Ensino e Professores</h4>
+
+<p>Você entende o conteúdo?</p>
+<label><input type="radio" name="Ensino1" value="Sim" required> Sim</label>
+<label><input type="radio" name="Ensino1" value="Não"> Não</label>
+
+<p>Professores preparados?</p>
+<label><input type="radio" name="Ensino2" value="Sim" required> Sim</label>
+<label><input type="radio" name="Ensino2" value="Não"> Não</label>
+
+<p>Aulas interessantes?</p>
+<label><input type="radio" name="Ensino3" value="Sim" required> Sim</label>
+<label><input type="radio" name="Ensino3" value="Não"> Não</label>
+
+<p>Consegue tirar dúvidas?</p>
+<label><input type="radio" name="Ensino4" value="Sim" required> Sim</label>
+<label><input type="radio" name="Ensino4" value="Não"> Não</label>
+
+<p>O ensino atende suas expectativas?</p>
+<label><input type="radio" name="Ensino5" value="Sim" required> Sim</label>
+<label><input type="radio" name="Ensino5" value="Não"> Não</label>
+</div>
+
+<div class="card">
+<h4>🧠 Ambiente Escolar</h4>
+
+<p>Você se sente seguro?</p>
+<label><input type="radio" name="Seguranca" value="Sim" required> Sim</label>
+<label><input type="radio" name="Seguranca" value="Não"> Não</label>
+
+<p>Existe respeito?</p>
+<label><input type="radio" name="Respeito" value="Sim" required> Sim</label>
+<label><input type="radio" name="Respeito" value="Não"> Não</label>
+
+<p>A escola escuta os alunos?</p>
+<label><input type="radio" name="Opiniao" value="Sim" required> Sim</label>
+<label><input type="radio" name="Opiniao" value="Não"> Não</label>
+
+<p>O ambiente é acolhedor?</p>
+<label><input type="radio" name="Ambiente" value="Sim" required> Sim</label>
+<label><input type="radio" name="Ambiente" value="Não"> Não</label>
+</div>
+
+<div class="card">
+<h4>🍽️ Alimentação</h4>
+
+<p>A merenda é boa?</p>
+<label><input type="radio" name="Merenda" value="Sim" required> Sim</label>
+<label><input type="radio" name="Merenda" value="Não"> Não</label>
+
+<p>A quantidade é suficiente?</p>
+<label><input type="radio" name="Quantidade" value="Sim" required> Sim</label>
+<label><input type="radio" name="Quantidade" value="Não"> Não</label>
+</div>
+
+<div class="card">
+<h4>📊 Avaliação Geral</h4>
+
+<label><input type="radio" name="Geral" value="Ótima" required> Ótima</label>
+<label><input type="radio" name="Geral" value="Boa"> Boa</label>
+<label><input type="radio" name="Geral" value="Regular"> Regular</label>
+<label><input type="radio" name="Geral" value="Ruim"> Ruim</label>
+</div>
+
+<div class="card">
+<h4>💬 Opinião</h4>
+
+<textarea name="Melhorar" placeholder="O que melhorar?"></textarea>
+<textarea name="Gostar" placeholder="O que você mais gosta?"></textarea>
+
+<button type="submit">Enviar</button>
+</div>
+
+</form>
+
 </div>
 
 <!-- CHAT -->
-<div id="chat" class="section active">
-
-  <div class="chat-box" id="chatBox"></div>
+<div id="chat" class="section chat-page">
+  <div id="chatBox" class="chat-area"></div>
 
   <div class="chat-input">
-    <input type="text" id="msg" placeholder="Escreva algo...">
+    <input type="text" id="msg" placeholder="Digite uma mensagem...">
     <button onclick="enviarMsg()">Enviar</button>
   </div>
-
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
