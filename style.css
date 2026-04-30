@@ -1,73 +1,89 @@
-*{margin:0;padding:0;box-sizing:border-box;}
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-body{
-  font-family:Arial;
+body {
+  font-family: Arial;
   background:#f2f2f2;
 }
 
 /* TOPO */
-header{
-  background:linear-gradient(90deg,#2e7d32,#4a148c);
+header {
+  background: linear-gradient(90deg,#2e7d32,#4a148c);
   color:white;
   text-align:center;
-  padding:10px;
+  padding:15px;
 }
 
-header img{width:60px;}
+header img {
+  width:80px; /* diminui logo */
+  display:block;
+  margin:0 auto 10px;
+}
 
-/* MENU */
-.top-menu{
+/* MENU BONITO */
+.top-menu {
   display:flex;
+  justify-content:space-around;
   background:#4a148c;
 }
 
-.top-menu button{
+.top-menu button {
   flex:1;
   padding:12px;
   border:none;
   background:none;
   color:white;
+  font-size:15px;
 }
 
-.top-menu button.active{
+.top-menu button.active {
   background:#2e7d32;
+  font-weight:bold;
 }
 
 /* SEÇÕES */
-.section{
+.section {
   display:none;
   padding:15px;
+  max-width:600px;
+  margin:auto; /* centraliza */
 }
 
-.active{
+.active {
   display:block;
 }
 
-/* CARDS */
-.card{
+/* CARDS BONITOS */
+.card {
   background:white;
   padding:15px;
-  border-radius:12px;
+  border-radius:15px;
   margin-bottom:15px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* FORM */
-label{
+/* PERGUNTAS */
+label {
   display:flex;
   align-items:center;
   gap:8px;
-  margin:5px 0;
+  margin:6px 0;
 }
 
-textarea{
+/* INPUTS */
+textarea {
   width:100%;
   padding:10px;
-  border-radius:8px;
+  border-radius:10px;
+  border:1px solid #ccc;
   margin-top:10px;
 }
 
-button{
+/* BOTÃO */
+button[type="submit"] {
   background:#4a148c;
   color:white;
   border:none;
@@ -77,49 +93,52 @@ button{
   margin-top:10px;
 }
 
-/* CHAT FULL */
-.chat-page{
+/* CHAT */
+.chat-page {
   display:flex;
   flex-direction:column;
   height:calc(100vh - 140px);
 }
 
-.chat-area{
+.chat-area {
   flex:1;
   overflow-y:auto;
+  background:#e5ddd5;
   padding:10px;
   display:flex;
   flex-direction:column;
   gap:8px;
-  background:#e5ddd5;
 }
 
-.msg{
+/* MENSAGEM */
+.msg {
   max-width:70%;
   padding:10px;
   border-radius:12px;
 }
 
-.aluno{
+.aluno {
   align-self:flex-end;
   background:#6a1b9a;
   color:white;
 }
 
-.nome{
+/* NOME */
+.nome {
   font-size:11px;
   color:#6a1b9a;
   align-self:flex-end;
 }
 
-.chat-input{
+/* INPUT CHAT */
+.chat-input {
   display:flex;
   gap:10px;
   padding:10px;
   background:white;
 }
 
-.chat-input input{
+.chat-input input {
   flex:1;
   padding:12px;
   border-radius:25px;
