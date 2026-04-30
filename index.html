@@ -35,18 +35,25 @@ header img {
   display: none;
   padding: 15px;
   padding-bottom: 100px;
+  animation: fade 0.3s;
 }
 
 .active {
   display: block;
 }
 
+@keyframes fade {
+  from {opacity:0; transform: translateY(10px);}
+  to {opacity:1;}
+}
+
 /* CARDS */
 .card {
   background: white;
   padding: 15px;
-  border-radius: 12px;
+  border-radius: 16px;
   margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 .dark .card {
@@ -59,18 +66,6 @@ label {
   align-items: center;
   gap: 8px;
   margin: 6px 0;
-}
-
-input[type="radio"] {
-  transform: scale(1.2);
-}
-
-/* TEXTAREA */
-textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
 }
 
 /* BOTÃO */
@@ -90,12 +85,18 @@ button {
   width: 100%;
   background: white;
   display: flex;
-  justify-content: space-around;
   border-top: 1px solid #ccc;
 }
 
-.dark .navbar {
-  background: #1e1e1e;
+.navbar button {
+  flex: 1;
+  background: none;
+  color: #333;
+}
+
+.navbar button.active {
+  color: #4a148c;
+  transform: scale(1.2);
 }
 
 /* CHAT */
@@ -104,6 +105,8 @@ button {
   overflow-y: auto;
   background: #e5e5e5;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .dark .chat-area {
@@ -116,20 +119,16 @@ button {
   margin-top: 10px;
 }
 
-/* BOTÃO DARK MODE */
+/* DARK BUTTON */
 .dark-toggle {
   position: fixed;
   bottom: 80px;
   right: 15px;
-  background: black;
-  color: white;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  font-size: 20px;
 }
 </style>
-
 </head>
 
 <body>
@@ -139,75 +138,62 @@ button {
   <h2>CETI José Marques</h2>
 </header>
 
-<!-- INÍCIO (MURAL) -->
+<!-- INICIO -->
 <div id="inicio" class="section active">
-
   <div class="card">
     <h3>📢 Mural de Avisos</h3>
-    <p>Fique por dentro das novidades da escola!</p>
+    <p>Atualizações da escola</p>
   </div>
 
   <div class="card">
-    <h4>🏆 Olimpíadas Escolares</h4>
-    <p>Inscrições abertas! Procure a coordenação.</p>
+    <h4>🏆 Olimpíadas</h4>
+    <p>Inscrições abertas</p>
   </div>
 
   <div class="card">
     <h4>📅 Cronograma</h4>
-    <p>Provas começam dia 10 de maio.</p>
+    <p>Provas dia 10</p>
   </div>
-
 </div>
 
-<!-- FORMULÁRIO COMPLETO -->
+<!-- FORMULÁRIO -->
 <div id="formulario" class="section">
-
 <form action="https://formsubmit.co/cetijosemarques2@gmail.com" method="POST">
 
 <div class="card"><h3>📋 Feedback Escolar</h3></div>
 
 <div class="card">
 <h4>🏫 Estrutura</h4>
-
 <p>Ambiente limpo?</p>
-<label><input type="radio" name="q1"> Sim</label>
+<label><input type="radio" name="q1" required> Sim</label>
 <label><input type="radio" name="q1"> Não</label>
 
 <p>Banheiros bons?</p>
-<label><input type="radio" name="q2"> Sim</label>
+<label><input type="radio" name="q2" required> Sim</label>
 <label><input type="radio" name="q2"> Não</label>
 
 <p>Salas confortáveis?</p>
-<label><input type="radio" name="q3"> Sim</label>
+<label><input type="radio" name="q3" required> Sim</label>
 <label><input type="radio" name="q3"> Não</label>
-
-<p>Espaços de estudo?</p>
-<label><input type="radio" name="q4"> Sim</label>
-<label><input type="radio" name="q4"> Não</label>
-
 </div>
 
 <div class="card">
 <h4>📚 Ensino</h4>
-
 <p>Entende o conteúdo?</p>
-<label><input type="radio" name="q5"> Sim</label>
-<label><input type="radio" name="q5"> Não</label>
+<label><input type="radio" name="q4" required> Sim</label>
+<label><input type="radio" name="q4"> Não</label>
 
 <p>Professores preparados?</p>
-<label><input type="radio" name="q6"> Sim</label>
-<label><input type="radio" name="q6"> Não</label>
-
+<label><input type="radio" name="q5" required> Sim</label>
+<label><input type="radio" name="q5"> Não</label>
 </div>
 
 <div class="card">
 <h4>📊 Avaliação</h4>
-
-<label><input type="radio" name="q7"> Ótima</label>
-<label><input type="radio" name="q7"> Boa</label>
-<label><input type="radio" name="q7"> Regular</label>
-<label><input type="radio" name="q7"> Ruim</label>
-
+<label><input type="radio" name="q6"> Ótima</label>
+<label><input type="radio" name="q6"> Boa</label>
+<label><input type="radio" name="q6"> Regular</label>
+<label><input type="radio" name="q6"> Ruim</label>
 </div>
 
 <div class="card">
@@ -216,7 +202,6 @@ button {
 </div>
 
 </form>
-
 </div>
 
 <!-- CHAT -->
@@ -234,26 +219,39 @@ button {
 
 <!-- MENU -->
 <div class="navbar">
-  <button onclick="abrir('inicio')">🏠</button>
-  <button onclick="abrir('formulario')">📝</button>
-  <button onclick="abrir('chat')">💬</button>
+  <button onclick="abrir('inicio', this)">🏠</button>
+  <button onclick="abrir('formulario', this)">📝</button>
+  <button onclick="abrir('chat', this)">💬</button>
 </div>
 
-<!-- BOTÃO DARK MODE -->
 <button class="dark-toggle" onclick="toggleDark()">🌙</button>
 
 <script>
-function abrir(secao) {
+function abrir(secao, botao) {
   document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
   document.getElementById(secao).classList.add("active");
+
+  document.querySelectorAll(".navbar button").forEach(b => b.classList.remove("active"));
+  if(botao) botao.classList.add("active");
 }
 
 function enviarMsg() {
-  let msg = document.getElementById("msg").value;
+  let input = document.getElementById("msg");
   let chat = document.getElementById("chatBox");
 
-  chat.innerHTML += "<p>" + msg + "</p>";
-  document.getElementById("msg").value = "";
+  if(input.value.trim() === "") return;
+
+  let msg = document.createElement("div");
+  msg.style.alignSelf = "flex-end";
+  msg.style.background = "linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045)";
+  msg.style.color = "white";
+  msg.style.padding = "10px";
+  msg.style.borderRadius = "20px";
+  msg.style.margin = "5px";
+  msg.innerText = "Anônimo: " + input.value;
+
+  chat.appendChild(msg);
+  input.value = "";
 }
 
 function toggleDark() {
