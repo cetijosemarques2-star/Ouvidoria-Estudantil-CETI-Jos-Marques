@@ -10,8 +10,15 @@ body {
   margin: 0;
   font-family: Arial;
   background: #f2f2f2;
+  transition: 0.3s;
 }
 
+.dark {
+  background: #121212;
+  color: white;
+}
+
+/* TOPO */
 header {
   background: linear-gradient(90deg, #2e7d32, #4a148c);
   color: white;
@@ -23,6 +30,7 @@ header img {
   width: 60px;
 }
 
+/* SEÇÕES */
 .section {
   display: none;
   padding: 15px;
@@ -33,6 +41,7 @@ header img {
   display: block;
 }
 
+/* CARDS */
 .card {
   background: white;
   padding: 15px;
@@ -40,6 +49,11 @@ header img {
   margin-bottom: 15px;
 }
 
+.dark .card {
+  background: #1e1e1e;
+}
+
+/* RADIO */
 label {
   display: flex;
   align-items: center;
@@ -51,6 +65,7 @@ input[type="radio"] {
   transform: scale(1.2);
 }
 
+/* TEXTAREA */
 textarea {
   width: 100%;
   padding: 10px;
@@ -58,6 +73,7 @@ textarea {
   border: 1px solid #ccc;
 }
 
+/* BOTÃO */
 button {
   background: #4a148c;
   color: white;
@@ -67,6 +83,7 @@ button {
   width: 100%;
 }
 
+/* MENU */
 .navbar {
   position: fixed;
   bottom: 0;
@@ -77,6 +94,11 @@ button {
   border-top: 1px solid #ccc;
 }
 
+.dark .navbar {
+  background: #1e1e1e;
+}
+
+/* CHAT */
 .chat-area {
   height: 300px;
   overflow-y: auto;
@@ -84,10 +106,27 @@ button {
   padding: 10px;
 }
 
+.dark .chat-area {
+  background: #2c2c2c;
+}
+
 .chat-input {
   display: flex;
   gap: 10px;
   margin-top: 10px;
+}
+
+/* BOTÃO DARK MODE */
+.dark-toggle {
+  position: fixed;
+  bottom: 80px;
+  right: 15px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
 }
 </style>
 
@@ -97,47 +136,82 @@ button {
 
 <header>
   <img src="logo.png">
-  <h2>Ouvidoria CETI</h2>
+  <h2>CETI José Marques</h2>
 </header>
 
+<!-- INÍCIO (MURAL) -->
 <div id="inicio" class="section active">
+
   <div class="card">
-    <h3>Bem-vindo 👋</h3>
+    <h3>📢 Mural de Avisos</h3>
+    <p>Fique por dentro das novidades da escola!</p>
   </div>
+
+  <div class="card">
+    <h4>🏆 Olimpíadas Escolares</h4>
+    <p>Inscrições abertas! Procure a coordenação.</p>
+  </div>
+
+  <div class="card">
+    <h4>📅 Cronograma</h4>
+    <p>Provas começam dia 10 de maio.</p>
+  </div>
+
 </div>
 
+<!-- FORMULÁRIO COMPLETO -->
 <div id="formulario" class="section">
 
 <form action="https://formsubmit.co/cetijosemarques2@gmail.com" method="POST">
 
-<div class="card">
-<h3>📋 Feedback Escolar</h3>
-</div>
+<div class="card"><h3>📋 Feedback Escolar</h3></div>
 
 <div class="card">
 <h4>🏫 Estrutura</h4>
+
 <p>Ambiente limpo?</p>
 <label><input type="radio" name="q1"> Sim</label>
 <label><input type="radio" name="q1"> Não</label>
+
+<p>Banheiros bons?</p>
+<label><input type="radio" name="q2"> Sim</label>
+<label><input type="radio" name="q2"> Não</label>
+
+<p>Salas confortáveis?</p>
+<label><input type="radio" name="q3"> Sim</label>
+<label><input type="radio" name="q3"> Não</label>
+
+<p>Espaços de estudo?</p>
+<label><input type="radio" name="q4"> Sim</label>
+<label><input type="radio" name="q4"> Não</label>
+
 </div>
 
 <div class="card">
 <h4>📚 Ensino</h4>
+
 <p>Entende o conteúdo?</p>
-<label><input type="radio" name="q2"> Sim</label>
-<label><input type="radio" name="q2"> Não</label>
+<label><input type="radio" name="q5"> Sim</label>
+<label><input type="radio" name="q5"> Não</label>
+
+<p>Professores preparados?</p>
+<label><input type="radio" name="q6"> Sim</label>
+<label><input type="radio" name="q6"> Não</label>
+
 </div>
 
 <div class="card">
 <h4>📊 Avaliação</h4>
-<label><input type="radio" name="q3"> Ótima</label>
-<label><input type="radio" name="q3"> Boa</label>
-<label><input type="radio" name="q3"> Regular</label>
-<label><input type="radio" name="q3"> Ruim</label>
+
+<label><input type="radio" name="q7"> Ótima</label>
+<label><input type="radio" name="q7"> Boa</label>
+<label><input type="radio" name="q7"> Regular</label>
+<label><input type="radio" name="q7"> Ruim</label>
+
 </div>
 
 <div class="card">
-<textarea name="comentario" placeholder="Sugestão..."></textarea>
+<textarea name="comentario" placeholder="Sugestões..."></textarea>
 <button type="submit">Enviar</button>
 </div>
 
@@ -145,9 +219,10 @@ button {
 
 </div>
 
+<!-- CHAT -->
 <div id="chat" class="section">
   <div class="card">
-    <h3>Chat</h3>
+    <h3>💬 Chat</h3>
     <div id="chatBox" class="chat-area"></div>
 
     <div class="chat-input">
@@ -157,11 +232,15 @@ button {
   </div>
 </div>
 
+<!-- MENU -->
 <div class="navbar">
   <button onclick="abrir('inicio')">🏠</button>
   <button onclick="abrir('formulario')">📝</button>
   <button onclick="abrir('chat')">💬</button>
 </div>
+
+<!-- BOTÃO DARK MODE -->
+<button class="dark-toggle" onclick="toggleDark()">🌙</button>
 
 <script>
 function abrir(secao) {
@@ -175,6 +254,10 @@ function enviarMsg() {
 
   chat.innerHTML += "<p>" + msg + "</p>";
   document.getElementById("msg").value = "";
+}
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
 }
 </script>
 
