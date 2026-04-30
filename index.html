@@ -6,131 +6,125 @@
 <title>Ouvidoria CETI José Marques</title>
 
 <style>
+* {margin:0;padding:0;box-sizing:border-box;}
+
 body {
-  margin: 0;
   font-family: Arial;
-  background: #f2f2f2;
-  transition: 0.3s;
+  background:#f2f2f2;
+  transition:0.3s;
 }
 
-.dark {
-  background: #121212;
-  color: white;
-}
+.dark {background:#121212;color:#fff;}
 
-/* TOPO */
 header {
-  background: linear-gradient(90deg, #2e7d32, #4a148c);
-  color: white;
-  text-align: center;
-  padding: 15px;
+  position:sticky;
+  top:0;
+  background:linear-gradient(90deg,#2e7d32,#4a148c);
+  color:white;
+  text-align:center;
+  padding:12px;
 }
 
-header img {
-  width: 60px;
-}
+header img {width:60px;}
 
-/* SEÇÕES */
 .section {
-  display: none;
-  padding: 15px;
-  padding-bottom: 100px;
-  animation: fade 0.3s;
+  display:none;
+  padding:15px;
+  padding-bottom:110px;
+  animation:fade 0.3s;
 }
 
-.active {
-  display: block;
-}
+.active {display:block;}
 
 @keyframes fade {
-  from {opacity:0; transform: translateY(10px);}
-  to {opacity:1;}
+  from{opacity:0;transform:translateY(10px);}
+  to{opacity:1;}
 }
 
-/* CARDS */
 .card {
-  background: white;
-  padding: 15px;
-  border-radius: 16px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  background:white;
+  padding:15px;
+  border-radius:15px;
+  margin-bottom:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
-.dark .card {
-  background: #1e1e1e;
-}
+.dark .card {background:#1e1e1e;}
 
-/* RADIO */
 label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 6px 0;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:6px 0;
 }
 
-/* BOTÃO */
+textarea {
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
 button {
-  background: #4a148c;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 10px;
-  width: 100%;
+  background:#4a148c;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  width:100%;
+  margin-top:10px;
 }
 
 /* MENU */
 .navbar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: white;
-  display: flex;
-  border-top: 1px solid #ccc;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:white;
+  display:flex;
+  border-top:1px solid #ccc;
 }
 
 .navbar button {
-  flex: 1;
-  background: none;
-  color: #333;
+  flex:1;
+  background:none;
+  color:#333;
+  font-size:18px;
 }
 
 .navbar button.active {
-  color: #4a148c;
-  transform: scale(1.2);
+  color:#4a148c;
+  transform:scale(1.2);
 }
 
 /* CHAT */
 .chat-area {
-  height: 300px;
-  overflow-y: auto;
-  background: #e5e5e5;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.dark .chat-area {
-  background: #2c2c2c;
+  height:300px;
+  overflow:auto;
+  background:#e5e5e5;
+  padding:10px;
+  display:flex;
+  flex-direction:column;
 }
 
 .chat-input {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  display:flex;
+  gap:10px;
+  margin-top:10px;
 }
 
 /* DARK BUTTON */
 .dark-toggle {
-  position: fixed;
-  bottom: 80px;
-  right: 15px;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  position:fixed;
+  bottom:80px;
+  right:15px;
+  border-radius:50%;
+  width:50px;
+  height:50px;
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
@@ -142,23 +136,86 @@ button {
 <div id="inicio" class="section active">
   <div class="card">
     <h3>📢 Mural de Avisos</h3>
-    <p>Atualizações da escola</p>
+    <p>Fique por dentro das novidades da escola.</p>
   </div>
 
   <div class="card">
     <h4>🏆 Olimpíadas</h4>
-    <p>Inscrições abertas</p>
+    <p>Inscrições abertas.</p>
   </div>
 
   <div class="card">
     <h4>📅 Cronograma</h4>
-    <p>Provas dia 10</p>
+    <p>Provas começam dia 10.</p>
   </div>
 </div>
 
-<https://formsubmit.co/cetijosemarques2@gmail.com
+<!-- FORMULÁRIO -->
+<div id="formulario" class="section">
+
+<form action="https://formsubmit.co/cetijosemarques2@gmail.com" method="POST">
+
+<div class="card"><h3>📋 Feedback Escolar</h3></div>
+
+<div class="card">
+<h4>🏫 Estrutura</h4>
+<p>Ambiente limpo?</p>
+<label><input type="radio" name="Limpeza" required> Sim</label>
+<label><input type="radio" name="Limpeza"> Não</label>
+
+<p>Banheiros em boas condições?</p>
+<label><input type="radio" name="Banheiros" required> Sim</label>
+<label><input type="radio" name="Banheiros"> Não</label>
+
+<p>Salas confortáveis?</p>
+<label><input type="radio" name="Salas" required> Sim</label>
+<label><input type="radio" name="Salas"> Não</label>
+
+<p>Espaços de estudo?</p>
+<label><input type="radio" name="Espacos" required> Sim</label>
+<label><input type="radio" name="Espacos"> Não</label>
+</div>
+
+<div class="card">
+<h4>📚 Ensino</h4>
+<p>Entende o conteúdo?</p>
+<label><input type="radio" name="Ensino1" required> Sim</label>
+<label><input type="radio" name="Ensino1"> Não</label>
+
+<p>Professores preparados?</p>
+<label><input type="radio" name="Ensino2" required> Sim</label>
+<label><input type="radio" name="Ensino2"> Não</label>
+</div>
+
+<div class="card">
+<h4>🧠 Ambiente</h4>
+<p>Se sente seguro?</p>
+<label><input type="radio" name="Seguranca" required> Sim</label>
+<label><input type="radio" name="Seguranca"> Não</label>
+</div>
+
+<div class="card">
+<h4>🍽️ Alimentação</h4>
+<p>Merenda é boa?</p>
+<label><input type="radio" name="Merenda" required> Sim</label>
+<label><input type="radio" name="Merenda"> Não</label>
+</div>
+
+<div class="card">
+<h4>📊 Avaliação</h4>
+<label><input type="radio" name="Geral" required> Ótima</label>
+<label><input type="radio" name="Geral"> Boa</label>
+<label><input type="radio" name="Geral"> Regular</label>
+<label><input type="radio" name="Geral"> Ruim</label>
+</div>
+
+<div class="card">
+<textarea name="comentario" placeholder="Sugestões..."></textarea>
+<button type="submit">Enviar</button>
+</div>
 
 </form>
+
 </div>
 
 <!-- CHAT -->
