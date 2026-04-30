@@ -1,111 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ouvidoria CETI José Marques</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f2f2f2;
+}
+
+header {
+  background: linear-gradient(90deg, #2e7d32, #4a148c);
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+header img {
+  width: 60px;
+}
+
+.section {
+  display: none;
+  padding: 15px;
+  padding-bottom: 100px;
+}
+
+.active {
+  display: block;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+input[type="radio"] {
+  transform: scale(1.2);
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #4a148c;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ccc;
+}
+
+.chat-area {
+  height: 300px;
+  overflow-y: auto;
+  background: #e5e5e5;
+  padding: 10px;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png">
+  <h2>Ouvidoria CETI</h2>
+</header>
+
+<div id="inicio" class="section active">
+  <div class="card">
+    <h3>Bem-vindo 👋</h3>
+  </div>
+</div>
+
 <div id="formulario" class="section">
 
-  <form action="https://formsubmit.co/cetijosemarques2@gmail.com" method="POST">
+<form action="https://formsubmit.co/cetijosemarques2@gmail.com" method="POST">
 
-    <div class="card">
-      <h3>📋 Feedback Escolar dos Alunos</h3>
-    </div>
+<div class="card">
+<h3>📋 Feedback Escolar</h3>
+</div>
 
-    <div class="card">
-      <h4>🏫 Estrutura da Escola</h4>
+<div class="card">
+<h4>🏫 Estrutura</h4>
+<p>Ambiente limpo?</p>
+<label><input type="radio" name="q1"> Sim</label>
+<label><input type="radio" name="q1"> Não</label>
+</div>
 
-      <p>O ambiente da escola é limpo e organizado?</p>
-      <label><input type="radio" name="q1" value="Sim"> Sim</label>
-      <label><input type="radio" name="q1" value="Não"> Não</label>
+<div class="card">
+<h4>📚 Ensino</h4>
+<p>Entende o conteúdo?</p>
+<label><input type="radio" name="q2"> Sim</label>
+<label><input type="radio" name="q2"> Não</label>
+</div>
 
-      <p>Os banheiros estão em boas condições?</p>
-      <label><input type="radio" name="q2" value="Sim"> Sim</label>
-      <label><input type="radio" name="q2" value="Não"> Não</label>
+<div class="card">
+<h4>📊 Avaliação</h4>
+<label><input type="radio" name="q3"> Ótima</label>
+<label><input type="radio" name="q3"> Boa</label>
+<label><input type="radio" name="q3"> Regular</label>
+<label><input type="radio" name="q3"> Ruim</label>
+</div>
 
-      <p>As salas são confortáveis?</p>
-      <label><input type="radio" name="q3" value="Sim"> Sim</label>
-      <label><input type="radio" name="q3" value="Não"> Não</label>
+<div class="card">
+<textarea name="comentario" placeholder="Sugestão..."></textarea>
+<button type="submit">Enviar</button>
+</div>
 
-      <p>Há espaços de estudo?</p>
-      <label><input type="radio" name="q4" value="Sim"> Sim</label>
-      <label><input type="radio" name="q4" value="Não"> Não</label>
-
-      <p>A estrutura atende suas necessidades?</p>
-      <label><input type="radio" name="q5" value="Sim"> Sim</label>
-      <label><input type="radio" name="q5" value="Não"> Não</label>
-    </div>
-
-    <div class="card">
-      <h4>📚 Ensino e Professores</h4>
-
-      <p>Você entende o conteúdo?</p>
-      <label><input type="radio" name="q6" value="Sim"> Sim</label>
-      <label><input type="radio" name="q6" value="Não"> Não</label>
-
-      <p>Os professores estão preparados?</p>
-      <label><input type="radio" name="q7" value="Sim"> Sim</label>
-      <label><input type="radio" name="q7" value="Não"> Não</label>
-
-      <p>As aulas são interessantes?</p>
-      <label><input type="radio" name="q8" value="Sim"> Sim</label>
-      <label><input type="radio" name="q8" value="Não"> Não</label>
-
-      <p>Você tira dúvidas com facilidade?</p>
-      <label><input type="radio" name="q9" value="Sim"> Sim</label>
-      <label><input type="radio" name="q9" value="Não"> Não</label>
-
-      <p>O ensino atende suas expectativas?</p>
-      <label><input type="radio" name="q10" value="Sim"> Sim</label>
-      <label><input type="radio" name="q10" value="Não"> Não</label>
-    </div>
-
-    <div class="card">
-      <h4>🧠 Ambiente Escolar</h4>
-
-      <p>Você se sente seguro?</p>
-      <label><input type="radio" name="q11" value="Sim"> Sim</label>
-      <label><input type="radio" name="q11" value="Não"> Não</label>
-
-      <p>Existe respeito na escola?</p>
-      <label><input type="radio" name="q12" value="Sim"> Sim</label>
-      <label><input type="radio" name="q12" value="Não"> Não</label>
-
-      <p>A escola escuta os alunos?</p>
-      <label><input type="radio" name="q13" value="Sim"> Sim</label>
-      <label><input type="radio" name="q13" value="Não"> Não</label>
-
-      <p>O ambiente é acolhedor?</p>
-      <label><input type="radio" name="q14" value="Sim"> Sim</label>
-      <label><input type="radio" name="q14" value="Não"> Não</label>
-    </div>
-
-    <div class="card">
-      <h4>🍽️ Alimentação</h4>
-
-      <p>A merenda é boa?</p>
-      <label><input type="radio" name="q15" value="Sim"> Sim</label>
-      <label><input type="radio" name="q15" value="Não"> Não</label>
-
-      <p>A quantidade é suficiente?</p>
-      <label><input type="radio" name="q16" value="Sim"> Sim</label>
-      <label><input type="radio" name="q16" value="Não"> Não</label>
-    </div>
-
-    <div class="card">
-      <h4>📊 Avaliação Geral</h4>
-
-      <label><input type="radio" name="avaliacao" value="Ótima"> Ótima</label>
-      <label><input type="radio" name="avaliacao" value="Boa"> Boa</label>
-      <label><input type="radio" name="avaliacao" value="Regular"> Regular</label>
-      <label><input type="radio" name="avaliacao" value="Ruim"> Ruim</label>
-    </div>
-
-    <div class="card">
-      <h4>💬 Opinião</h4>
-
-      <textarea name="melhoria" placeholder="O que melhorar?"></textarea>
-      <textarea name="positivo" placeholder="O que você mais gosta?"></textarea>
-    </div>
-
-    <div class="card">
-      <button type="submit">Enviar Respostas</button>
-    </div>
-
-  </form>
+</form>
 
 </div>
+
+<div id="chat" class="section">
+  <div class="card">
+    <h3>Chat</h3>
+    <div id="chatBox" class="chat-area"></div>
+
+    <div class="chat-input">
+      <input type="text" id="msg">
+      <button onclick="enviarMsg()">Enviar</button>
+    </div>
+  </div>
+</div>
+
+<div class="navbar">
+  <button onclick="abrir('inicio')">🏠</button>
+  <button onclick="abrir('formulario')">📝</button>
+  <button onclick="abrir('chat')">💬</button>
+</div>
+
+<script>
+function abrir(secao) {
+  document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+  document.getElementById(secao).classList.add("active");
+}
+
+function enviarMsg() {
+  let msg = document.getElementById("msg").value;
+  let chat = document.getElementById("chatBox");
+
+  chat.innerHTML += "<p>" + msg + "</p>";
+  document.getElementById("msg").value = "";
+}
+</script>
+
+</body>
+</html>
