@@ -1,125 +1,102 @@
-* {margin:0;padding:0;box-sizing:border-box;}
-
 body {
+  margin:0;
   font-family: Arial;
-  background:#f2f2f2;
-  transition:0.3s;
+  background:#ececec;
 }
 
-.dark {background:#121212;color:#fff;}
-
-header {
-  position:sticky;
-  top:0;
-  background:linear-gradient(90deg,#2e7d32,#4a148c);
-  color:white;
-  text-align:center;
-  padding:12px;
-}
-
-header img {width:60px;}
-
-.section {
-  display:none;
-  padding:15px;
-  padding-bottom:110px;
-}
-
-.active {display:block;}
-
-.card {
-  background:white;
-  padding:15px;
-  border-radius:15px;
-  margin-bottom:15px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.15);
-}
-
-.clicavel {cursor:pointer;}
-
-.dark .card {background:#1e1e1e;}
-
-label {
-  display:flex;
-  align-items:center;
-  gap:8px;
-  margin:6px 0;
-}
-
-textarea {
-  width:100%;
+/* TOPO */
+.topbar {
+  background:#1f4a7a;
   padding:10px;
-  border-radius:8px;
-  border:1px solid #ccc;
 }
 
-button {
-  background:#4a148c;
+.tabs {
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+}
+
+.tab {
+  background:#2d5d95;
   color:white;
   border:none;
-  padding:12px;
-  border-radius:10px;
-  width:100%;
+  padding:8px 14px;
+  border-radius:20px;
 }
 
-/* MENU */
-.navbar {
-  position:fixed;
-  bottom:0;
-  width:100%;
+.tab.active {
   background:white;
+  color:#1f4a7a;
+}
+
+/* HEADER */
+.header {
   display:flex;
-  border-top:1px solid #ccc;
+  align-items:center;
+  gap:10px;
+  padding:15px;
+  background:linear-gradient(90deg,#2e7d32,#4a148c);
+  color:white;
 }
 
-.navbar button {
-  flex:1;
-  background:none;
-  font-size:18px;
-}
-
-.navbar button.active {
-  color:#4a148c;
-  transform:scale(1.2);
+.header img {
+  width:40px;
 }
 
 /* CHAT */
-#chat {
+.chat-container {
   display:flex;
   flex-direction:column;
-  height:calc(100vh - 70px);
+  height:calc(100vh - 130px);
 }
 
-.chat-area {
+.chat-box {
   flex:1;
-  overflow-y:auto;
-  background:#d9dbd5;
   padding:10px;
+  overflow-y:auto;
+}
+
+/* MENSAGENS */
+.msg-row {
+  margin:10px 0;
   display:flex;
   flex-direction:column;
-  gap:8px;
+}
+
+.msg-row.left {
+  align-items:flex-start;
+}
+
+.msg-row.right {
+  align-items:flex-end;
+}
+
+.user {
+  font-size:12px;
+  color:#007bff;
 }
 
 .msg {
-  max-width:75%;
-  padding:10px 14px;
-  border-radius:15px;
+  padding:12px;
+  border-radius:20px;
+  max-width:70%;
+  margin-top:5px;
 }
 
-.msg.aluno {
-  align-self:flex-end;
+/* ESQUERDA */
+.msg.left {
+  background:#e0e0e0;
+}
+
+/* DIREITA (ROXO) */
+.msg.right {
   background:#7b1fa2;
   color:white;
 }
 
-.nome {
-  font-size:11px;
-  align-self:flex-end;
-}
-
+/* INPUT */
 .chat-input {
   display:flex;
-  gap:10px;
   padding:10px;
   background:white;
 }
@@ -131,11 +108,9 @@ button {
   border:1px solid #ccc;
 }
 
-.dark-toggle {
-  position:fixed;
-  bottom:80px;
-  right:15px;
-  border-radius:50%;
-  width:50px;
-  height:50px;
+.chat-input button {
+  background:none;
+  border:none;
+  color:#007bff;
+  font-weight:bold;
 }
