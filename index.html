@@ -10,13 +10,12 @@
 
 <body>
 
-<!-- TOPO -->
+<!-- TOPO COM ABAS -->
 <div class="topbar">
   <div class="tabs">
-    <button class="tab active">💬 Chat</button>
-    <button class="tab">💡 Mural</button>
-    <button class="tab">📢 Alertas</button>
-    <button class="tab">🎭 Humor</button>
+    <button onclick="abrir('chat', this)" class="tab active">💬 Chat</button>
+    <button onclick="abrir('inicio', this)" class="tab">💡 Mural</button>
+    <button onclick="abrir('formulario', this)" class="tab">📋 Formulário</button>
   </div>
 </div>
 
@@ -26,26 +25,28 @@
   <h2>CETI José Marques</h2>
 </header>
 
-<!-- CHAT -->
-<div class="chat-container">
-
-  <div id="chatBox" class="chat-box">
-
-    <!-- MENSAGEM ESQUERDA -->
-    <div class="msg-row left">
-      <span class="user">Aluno</span>
-      <div class="msg left">O que é fagu?</div>
-    </div>
-
-    <!-- DIREITA -->
-    <div class="msg-row right">
-      <span class="user">Anônimo</span>
-      <div class="msg right">Nem sei também</div>
-    </div>
-
+<!-- MURAL -->
+<div id="inicio" class="section">
+  <div class="card">
+    <h3>📢 Avisos</h3>
+    <p>Aqui ficam os avisos da escola.</p>
   </div>
+</div>
 
-  <!-- INPUT -->
+<!-- FORM -->
+<div id="formulario" class="section">
+  <div class="card">
+    <h3>📋 Feedback</h3>
+    <textarea placeholder="Digite sua opinião..."></textarea>
+    <button>Enviar</button>
+  </div>
+</div>
+
+<!-- CHAT -->
+<div id="chat" class="section active">
+
+  <div class="chat-box" id="chatBox"></div>
+
   <div class="chat-input">
     <input type="text" id="msg" placeholder="Escreva algo...">
     <button onclick="enviarMsg()">Enviar</button>
