@@ -1,89 +1,75 @@
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
-body {
-  font-family: Arial;
+body{
+  font-family:Arial;
   background:#f2f2f2;
 }
 
 /* TOPO */
-header {
-  background: linear-gradient(90deg,#2e7d32,#4a148c);
+header{
+  background:linear-gradient(90deg,#2e7d32,#4a148c);
   color:white;
   text-align:center;
   padding:15px;
 }
 
-header img {
-  width:80px; /* diminui logo */
-  display:block;
-  margin:0 auto 10px;
+header img{
+  width:70px;
 }
 
-/* MENU BONITO */
-.top-menu {
+/* MENU */
+.tabs{
   display:flex;
-  justify-content:space-around;
-  background:#4a148c;
+  background:white;
 }
 
-.top-menu button {
+.tabs button{
   flex:1;
   padding:12px;
   border:none;
-  background:none;
-  color:white;
-  font-size:15px;
-}
-
-.top-menu button.active {
-  background:#2e7d32;
+  background:#eee;
   font-weight:bold;
 }
 
-/* SEÇÕES */
-.section {
-  display:none;
-  padding:15px;
-  max-width:600px;
-  margin:auto; /* centraliza */
+.tabs button.active{
+  background:#4a148c;
+  color:white;
 }
 
-.active {
+/* SEÇÕES */
+.section{
+  display:none;
+  padding:15px;
+}
+
+.section.active{
   display:block;
 }
 
-/* CARDS BONITOS */
-.card {
+/* CARDS */
+.card{
   background:white;
   padding:15px;
   border-radius:15px;
   margin-bottom:15px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* PERGUNTAS */
-label {
+/* FORM */
+label{
   display:flex;
-  align-items:center;
   gap:8px;
-  margin:6px 0;
+  margin:5px 0;
 }
 
-/* INPUTS */
-textarea {
+textarea{
   width:100%;
   padding:10px;
-  border-radius:10px;
+  border-radius:8px;
   border:1px solid #ccc;
-  margin-top:10px;
 }
 
-/* BOTÃO */
-button[type="submit"] {
+button{
   background:#4a148c;
   color:white;
   border:none;
@@ -93,52 +79,58 @@ button[type="submit"] {
   margin-top:10px;
 }
 
-/* CHAT */
-.chat-page {
+/* CHAT FULL SCREEN */
+.chat-page{
+  height:calc(100vh - 160px);
   display:flex;
   flex-direction:column;
-  height:calc(100vh - 140px);
 }
 
-.chat-area {
+.chat-box{
   flex:1;
   overflow-y:auto;
-  background:#e5ddd5;
+  background:#d9dbd5;
   padding:10px;
   display:flex;
   flex-direction:column;
-  gap:8px;
 }
 
-/* MENSAGEM */
-.msg {
+.msg{
   max-width:70%;
   padding:10px;
-  border-radius:12px;
+  border-radius:15px;
+  margin:5px;
+  font-size:14px;
 }
 
-.aluno {
+/* mensagem usuário */
+.msg.user{
   align-self:flex-end;
-  background:#6a1b9a;
+  background:#4a148c;
   color:white;
 }
 
-/* NOME */
-.nome {
+/* mensagem outro */
+.msg.other{
+  align-self:flex-start;
+  background:white;
+}
+
+/* nome */
+.nome{
   font-size:11px;
   color:#6a1b9a;
-  align-self:flex-end;
 }
 
 /* INPUT CHAT */
-.chat-input {
+.chat-input{
   display:flex;
   gap:10px;
   padding:10px;
   background:white;
 }
 
-.chat-input input {
+.chat-input input{
   flex:1;
   padding:12px;
   border-radius:25px;
