@@ -3,98 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ouvidoria CETI José Marques</title>
+<title>Ouvidoria CETI</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<!-- TOPO -->
+<div class="topbar">
+  <div class="tabs">
+    <button class="tab active">💬 Chat</button>
+    <button class="tab">💡 Mural</button>
+    <button class="tab">📢 Alertas</button>
+    <button class="tab">🎭 Humor</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
   <img src="logo.png">
   <h2>CETI José Marques</h2>
 </header>
 
-<!-- INÍCIO -->
-<div id="inicio" class="section active">
-  <div class="card">
-    <h3>📢 Mural de Avisos</h3>
-    <p>Fique por dentro das novidades da escola.</p>
-  </div>
-
-  <div class="card clicavel" onclick="abrir('olimpiadas', this)">
-    <h4>🏆 Olimpíadas</h4>
-    <p>Ver detalhes</p>
-  </div>
-
-  <div class="card clicavel" onclick="abrir('cronograma', this)">
-    <h4>📅 Cronograma</h4>
-    <p>Ver detalhes</p>
-  </div>
-</div>
-
-<!-- OLIMPÍADAS -->
-<div id="olimpiadas" class="section">
-  <div class="card">
-    <h3>🏆 Olimpíadas</h3>
-  </div>
-
-  <div class="card">
-    <p>📐 Olimpíada de Matemática - Inscrições abertas</p>
-    <p>🧪 Olimpíada de Ciências - 20 de Maio</p>
-  </div>
-</div>
-
-<!-- CRONOGRAMA -->
-<div id="cronograma" class="section">
-  <div class="card">
-    <h3>📅 Cronograma</h3>
-  </div>
-
-  <div class="card">
-    <p>📌 Provas: 10 de Maio</p>
-    <p>📌 Trabalhos: 15 de Maio</p>
-    <p>📌 Feira Escolar: 30 de Maio</p>
-  </div>
-</div>
-
-<!-- FORMULÁRIO -->
-<div id="formulario" class="section">
-<form action="https://formsubmit.co/cetijosemarques2@gmail.com" method="POST">
-
-<div class="card"><h3>📋 Feedback</h3></div>
-
-<div class="card">
-<p>Ambiente limpo?</p>
-<label><input type="radio" name="q1" required> Sim</label>
-<label><input type="radio" name="q1"> Não</label>
-
-<textarea name="comentario" placeholder="Sugestões..."></textarea>
-
-<button type="submit">Enviar</button>
-</div>
-
-</form>
-</div>
-
 <!-- CHAT -->
-<div id="chat" class="section">
-  <div class="chat-area" id="chatBox"></div>
+<div class="chat-container">
 
+  <div id="chatBox" class="chat-box">
+
+    <!-- MENSAGEM ESQUERDA -->
+    <div class="msg-row left">
+      <span class="user">Aluno</span>
+      <div class="msg left">O que é fagu?</div>
+    </div>
+
+    <!-- DIREITA -->
+    <div class="msg-row right">
+      <span class="user">Anônimo</span>
+      <div class="msg right">Nem sei também</div>
+    </div>
+
+  </div>
+
+  <!-- INPUT -->
   <div class="chat-input">
-    <input type="text" id="msg" placeholder="Digite uma mensagem">
+    <input type="text" id="msg" placeholder="Escreva algo...">
     <button onclick="enviarMsg()">Enviar</button>
   </div>
-</div>
 
-<!-- MENU -->
-<div class="navbar">
-  <button onclick="abrir('inicio', this)">🏠</button>
-  <button onclick="abrir('formulario', this)">📝</button>
-  <button onclick="abrir('chat', this)">💬</button>
 </div>
-
-<button class="dark-toggle" onclick="toggleDark()">🌙</button>
 
 <script src="script.js"></script>
 
